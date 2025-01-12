@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    >
+
+    <ImageView
+        android:id="@+id/img_sebha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sebha" />
+
+    <TextView
+        android:id="@+id/tv_sebha_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_sebha"
+        app:layout_constraintEnd_toEndOf="@id/img_sebha"
+        app:layout_constraintStart_toStartOf="@id/img_sebha"
+        app:layout_constraintTop_toTopOf="@id/img_sebha"
+        android:text="سبحان الله" />
+
+    <TextView
+        android:id="@+id/tv_sebha_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@id/img_sebha"
+        app:layout_constraintStart_toStartOf="@id/img_sebha"
+        app:layout_constraintTop_toBottomOf="@id/tv_sebha_text"
+        tools:text="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
