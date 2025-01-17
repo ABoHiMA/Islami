@@ -3,37 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="18dp"
-    >
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/img_sebha"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/sebha" />
+        android:src="@drawable/sebha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_sebha_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="90dp"
+        android:gravity="center"
+        android:text="سبحان الله"
         android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@id/img_sebha"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_sebha"
         app:layout_constraintEnd_toEndOf="@id/img_sebha"
         app:layout_constraintStart_toStartOf="@id/img_sebha"
-        app:layout_constraintTop_toTopOf="@id/img_sebha"
-        android:text="سبحان الله" />
+        app:layout_constraintTop_toTopOf="@id/img_sebha" />
 
     <TextView
         android:id="@+id/tv_sebha_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="1"
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@id/img_sebha"
         app:layout_constraintStart_toStartOf="@id/img_sebha"
-        app:layout_constraintTop_toBottomOf="@id/tv_sebha_text"
-        tools:text="0" />
+        app:layout_constraintTop_toBottomOf="@id/tv_sebha_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

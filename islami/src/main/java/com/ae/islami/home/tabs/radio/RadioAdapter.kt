@@ -18,24 +18,6 @@ class RadioAdapter(val listOfRadioName: List<String>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
         holder.dataBinding(listOfRadioName, position)
-//        {
-//            holder.itemViewBinding.tvRadioName.text = listOfRadioName[position]
-//            holder.itemViewBinding.icPlay.setOnClickListener {
-//                holder.itemViewBinding.icPlay.setImageResource(R.drawable.ic_pause)
-//            }
-//            onSoundClickListener?.let {
-//                holder.itemViewBinding.icSound.setOnClickListener {
-//                    onSoundClickListener?.onClick(position)
-//                }
-//            }
-//        }
-
-    //    lateinit var onPlayClickListener: OnItemClickListener
-//    var onSoundClickListener: OnItemClickListener? = null
-//
-//    fun interface OnItemClickListener {
-//        fun onClick(position: Int)
-//    }
 
     class ViewHolder(private val itemViewBinding: ItemRadioContentBinding) :
         RecyclerView.ViewHolder(itemViewBinding.root) {

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ae.islami.R
 import com.ae.islami.databinding.ItemQuraanContentBinding
 import com.ae.islami.models.Sura
+import java.util.Locale
 
 class QuraanAdapter(val listOfSuaras: List<Sura>) :
     RecyclerView.Adapter<QuraanAdapter.ViewHolder>() {
@@ -20,18 +21,12 @@ class QuraanAdapter(val listOfSuaras: List<Sura>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val sura = listOfSuaras[position]
-        val verses = "${sura.numOfAyat} " + getString(holder.itemView.context, R.string.verses)
-        holder.itemViewBinding.tvEn.text = sura.suraByEn
-        holder.itemViewBinding.tvAr.text = sura.suraByAR
-        holder.itemViewBinding.tvNum.text = "${sura.numOfSura}"
-        holder.itemViewBinding.tvVerses.text = verses
-
+        holder.bindData(sura)
         onItemClickListener?.let {
             holder.itemView.setOnClickListener {
                 onItemClickListener?.onClickListener(position, sura)
             }
         }
-
     }
 
     var onItemClickListener: OnItemClickListener? = null
@@ -41,5 +36,24 @@ class QuraanAdapter(val listOfSuaras: List<Sura>) :
     }
 
     class ViewHolder(val itemViewBinding: ItemQuraanContentBinding) :
-        RecyclerView.ViewHolder(itemViewBinding.root)
+        RecyclerView.ViewHolder(itemViewBinding.root) {
+        fun bindData(sura: Sura) {
+            val verses = "${sura.numOfAyat} " + getString(itemView.context, R.string.verses)
+            val lang = Locale.getDefault().language
+            val engText = if (lang.equals("en")) {
+                sura.suraByEn
+            } else {
+                sura.suraByAR
+            }
+            val arText = if (lang.equals("en")) {
+                sura.suraByAR
+            } else {
+                sura.suraByEn
+            }
+            itemViewBinding.tvEn.text = engText
+            itemViewBinding.tvAr.text = arText
+            itemViewBinding.tvNum.text = "${sura.numOfSura}"
+            itemViewBinding.tvVerses.text = verses
+        }
+    }
 }

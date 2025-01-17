@@ -30,7 +30,7 @@ class FragmentRadio : Fragment() {
 
     private fun createItems() {
         for (i in 0..6) {
-            radioName.add("Ahmed [${i + 1}]")
+            radioName.add("Ahmed Ebrahim [${i + 1}]")
         }
     }
 

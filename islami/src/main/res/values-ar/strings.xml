@@ -3,8 +3,8 @@
     <string name="app_name">Islami</string>
     <string name="suras_list">السور</string>
     <string name="quraan">القرآن</string>
-    <string name="hadith">حديث</string>
-    <string name="sebha">سبحة</string>
-    <string name="radio">راديو</string>
+    <string name="hadith">الاحاديث</string>
+    <string name="sebha">السبحة</string>
+    <string name="radio">الراديو</string>
     <string name="verses">آيات</string>
 </resources>

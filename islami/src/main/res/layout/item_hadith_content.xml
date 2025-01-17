@@ -25,8 +25,8 @@
         android:layout_marginTop="18dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_black_open_bracet"
-        app:layout_constraintStart_toStartOf="@id/card"
-        app:layout_constraintTop_toTopOf="@id/card" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_close"
@@ -36,7 +36,7 @@
         android:layout_marginEnd="18dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_black_close_bracet"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

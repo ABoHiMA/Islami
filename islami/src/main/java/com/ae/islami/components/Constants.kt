@@ -3,8 +3,13 @@ package com.ae.islami.components
 import com.ae.islami.models.Sura
 
 object Constants {
-    var counter = 0
-
+    var counter = 1
+    val zekr = listOf(
+        "سبحان الله",
+        "الحمدلله",
+        "الله اكبر",
+        "\n\nلا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",
+    )
     val arabicAuranSuras = listOf(
         "الفاتحه",
         "البقرة",
@@ -354,12 +359,12 @@ object Constants {
         6
     )
 
-    fun getSuras() : List<Sura> {
+    fun getSuras(): List<Sura> {
         val chapter = mutableListOf<Sura>()
-        for (i in 0 .. 113){
+        for (i in 0..113) {
             chapter.add(
                 Sura(
-                    numOfSura = i+1,
+                    numOfSura = i + 1,
                     numOfAyat = AyaNumber[i],
                     suraByEn = englishQuranSurahs[i],
                     suraByAR = arabicAuranSuras[i],
