@@ -23,8 +23,10 @@ class RadioAdapter(val listOfRadioName: List<String>) :
         RecyclerView.ViewHolder(itemViewBinding.root) {
         fun dataBinding(listOfRadioName: List<String>, position: Int) {
             var isPlay = false
+            var isSound = false
 
             itemViewBinding.tvRadioName.text = listOfRadioName[position]
+
             itemViewBinding.icPlay.setOnClickListener {
                 if (!isPlay) {
                     itemViewBinding.icPlay.setImageResource(R.drawable.ic_pause)
@@ -34,13 +36,14 @@ class RadioAdapter(val listOfRadioName: List<String>) :
                     isPlay = false
                 }
             }
+
             itemViewBinding.icSound.setOnClickListener {
-                if (!isPlay) {
+                if (!isSound) {
                     itemViewBinding.icSound.setImageResource(R.drawable.ic_mute)
-                    isPlay = true
+                    isSound = true
                 } else {
                     itemViewBinding.icSound.setImageResource(R.drawable.ic_sound)
-                    isPlay = false
+                    isSound = false
                 }
             }
 
